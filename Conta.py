@@ -9,9 +9,13 @@ class Conta:
     def extrato(self):
         print(f"Saldo  = {self.saldo} do titular {self.titular}")
 
+    def depositar(self, valor):
+        self.saldo += valor
 
-conta = Conta(123, "Yara", 55.5, 1000)
+    def sacar(self, valor):
+        self.saldo -= valor
+
+
 conta1 = Conta(321, "Fabio", 1000, 50)
-print(conta.titular)
-print(conta1.titular)
-Conta.extrato(conta)
+conta1.sacar(50)
+conta1.extrato()
